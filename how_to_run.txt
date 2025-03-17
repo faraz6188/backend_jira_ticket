@@ -1,0 +1,52 @@
+Part 1: Setting Up the Backend (FastAPI)
+Step 1: Create a virtual environment
+# Navigate to your project folder
+mkdir jira-ticket-rewriter
+cd jira-ticket-rewriter
+
+# Create a backend folder
+mkdir backend
+cd backend
+
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+Step 2: Create and complete the .env file
+Create a file named .env in the backend folder with this content:
+CopyJIRA_DOMAIN=""
+JIRA_EMAIL=""
+JIRA_API_TOKEN=""
+GEMINI_API_KEY=""
+Step 3: Create app.py
+Create a file named app.py with the FastAPI backend code I provided earlier.
+Step 4: Install required packages
+pip install fastapi uvicorn requests python-dotenv google-generativeai
+Step 5: Run the FastAPI server
+uvicorn app:app --reload
+Your FastAPI server will now be running at http://localhost:8000
+Part 2: Setting Up the Frontend (React)
+Step 1: Create a new React app
+In a new terminal window:
+# Navigate back to the project folder
+cd ..
+
+# Create a React app
+npx create-react-app frontend
+cd frontend
+Step 2: Create .env file
+Create a file named .env in the frontend folder:
+REACT_APP_API_URL=http://localhost:8000
+Step 3: Install required packages
+npm install axios
+Step 4: Replace the App.js file
+Replace the contents of src/App.js with the React code I provided earlier.
+Step 5: Replace the App.css file
+Replace the contents of src/App.css with the CSS code I provided earlier.
+Step 6: Run the React app
+npm start
+Your React app will now be running at http://localhost:3000
